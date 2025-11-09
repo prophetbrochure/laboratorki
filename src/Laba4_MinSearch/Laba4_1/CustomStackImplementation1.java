@@ -1,6 +1,6 @@
 package Laba4_MinSearch.Laba4_1;
 
-public class CustomStackRealisation1<T extends Comparable<T>> implements CustomStack<T> {
+public class CustomStackImplementation1<T extends Comparable<T>> implements CustomStack<T> {
     private class Node {
         private final T data;
         private final Node prev;

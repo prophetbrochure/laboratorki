@@ -1,8 +1,8 @@
-package Laba4_1;
+package Laba4_MinSearch.Laba4_1;
 
 public class Main {
     public static void main(String[] args){
-        CustomStack<Integer> customStack1 = new CustomStackRealisation1<>();
+        CustomStack<Integer> customStack1 = new CustomStackImplementation1<>();
 
         customStack1.push(1);
         customStack1.push(2);

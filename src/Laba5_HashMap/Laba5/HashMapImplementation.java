@@ -17,7 +17,7 @@ public class HashMapImplementation<V> implements HashMap<String, V> {
 
     private static final int TABLE_SIZE = 300007;
     private static final int A = 31;
-    List<List<Pair<V>>> array;
+    private final List<List<Pair<V>>> array;
 
     public HashMapImplementation() {
         array = new ArrayList<>(TABLE_SIZE);
@@ -51,7 +51,7 @@ public class HashMapImplementation<V> implements HashMap<String, V> {
                 return;
             }
         }
-        bucket.add(new Pair<V>(key, value));
+        bucket.add(new Pair<>(key, value));
     }
 
     @Override

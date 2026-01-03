@@ -6,17 +6,15 @@ public class Main {
         PriorityQueue<Integer> priorityQueue = new PriorityQueueImplementation2();
 
 
-
-      for (int i = (int) Math.pow(2, 4) - 1 ; i > 0; i--) {
-           priorityQueue.enqueue(i);
-      }
-
-       priorityQueue.increment(1, 10);
-
-        for(int i = 0; i < Math.pow(2, 5)-1; i++){
-            priorityQueue.dequeueMax();
+        for (int i = (int) Math.pow(2, 4) - 1; i > 0; i--) {
+            priorityQueue.enqueue(i);
         }
 
+        priorityQueue.increment(1, 10);
+
+        for (int i = 0; i < Math.pow(2, 5) - 1; i++) {
+            priorityQueue.dequeueMax();
+        }
 
 
     }

@@ -54,6 +54,9 @@ public class CustomStackImplementation2<T extends Comparable<T>> implements Cust
 
     @Override
     public T min() {
+        if (head == null) {
+            return null;
+        }
         return head.getMin();
     }
 }

@@ -1,6 +1,7 @@
 package Laba4_MinSearch.Laba4_2;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PriorityQueueImplementation2 implements PriorityQueue<Integer> {
     private static class Node {
@@ -22,8 +23,8 @@ public class PriorityQueueImplementation2 implements PriorityQueue<Integer> {
         b.i = tempI;
     }
 
-    ArrayList<Node> array = new ArrayList<>();
-    Integer idCounter = 1;
+    private List<Node> array = new ArrayList<>();
+    private Integer idCounter = 1;
 
     @Override
     public void enqueue(Integer value) {

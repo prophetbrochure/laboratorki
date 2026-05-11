@@ -2,29 +2,16 @@ package Laba9_SearchTrees.Laba9_1;
 
 public class Main {
     public static void main(String[] args){
-        BstNode tree = new BstNode(5);
+        BstNode tree = new BstNode(10);
 
-        int[] addedArray = {1,2,4,5};
-        int[] notAddedArray = {-1, 0, -2,3,  6, 10};
-
-
-        for(int i : addedArray){
-            tree.insert(i);
-        }
-
-
-        tree.delete(1);
-
-        System.out.println(tree.has(1));
-
+        tree.insert(15);
+        tree.insert(5);
+        tree.insert(2);
         tree.insert(1);
+
         System.out.println(tree.has(1));
-
-        tree.delete(5);
-
-
-
-
+        tree.delete(1);
+        System.out.println(tree.has(1));
 
 
 

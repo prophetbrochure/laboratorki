@@ -75,7 +75,7 @@ public class BstNode {
                     parent.rightSon = this.rightSon;
                 }
             } else {// 2 ребёнка
-                this.value = removeMin(this.rightSon);
+                this.value = removeMin(this.rightSon, this);
             }
 
         } else if (target > this.value) {
@@ -85,9 +85,13 @@ public class BstNode {
         }
     }
 
-    private int removeMin(BstNode startNode) {
-        BstNode parent = null;
+    private int removeMin(BstNode startNode, BstNode parent) {
         BstNode currentNode = startNode.leftSon;
+
+        if(startNode.leftSon == null){
+            parent.rightSon = startNode.rightSon;
+            return startNode.value;
+        }
 
         while (currentNode.leftSon != null) {
             parent = currentNode;

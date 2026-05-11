@@ -103,4 +103,43 @@ public class BstNode {
 
         return currentNode.value;
     }
+
+    public BstNode nerdEmojiDelete(int x) {
+        if (x < this.value) {
+            if (leftSon != null)
+                leftSon = leftSon.nerdEmojiDelete(x);
+
+            return this;
+        }
+        if (x > this.value) {
+            if (rightSon != null)
+                rightSon = rightSon.nerdEmojiDelete(x);
+
+            return this;
+        }
+
+
+        // удаляем текущий узел
+        if (leftSon == null && rightSon == null) {  // нет детей
+            return null;
+        }
+
+
+        if (leftSon == null) return rightSon;   // один ребёнок
+        if (rightSon == null) return leftSon;
+
+
+        BstNode min = findMin(rightSon);      //    два ребёнка
+        this.value = min.value;
+        rightSon = rightSon.nerdEmojiDelete(min.value);
+
+        return this;
+    }
+
+    private BstNode findMin(BstNode node){
+        while (node.leftSon != null) {
+            node = node.leftSon;
+        }
+        return node;
+    }
 }

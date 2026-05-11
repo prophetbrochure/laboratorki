@@ -1,8 +1,10 @@
+package Laba7_DynamicProgramming.Laba7_2;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class lab7_2{
+public class Main {
     public static void main(String[] args){
         int[] a = {1,2, 1,3, 1,4,1 ,5 ,1 ,6,1 };
 

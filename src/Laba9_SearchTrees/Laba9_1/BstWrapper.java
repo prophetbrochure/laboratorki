@@ -61,7 +61,7 @@ public class BstWrapper<T extends Comparable<T>> {
         }
         BstNode2<T> result = root.next(target);
         if (result == null) {
-            System.out.println("В дереве нет объектов, больше заданного");
+            System.out.println("В дереве нет объектов больше " + target);
         } else {
             System.out.println("Следующий объект для объекта " + target + ": " + result.value);
         }
@@ -79,11 +79,9 @@ public class BstWrapper<T extends Comparable<T>> {
         }
         BstNode2<T> result = root.prev(target);
         if (result == null) {
-            System.out.println("В дереве нет объектов, меньше заданного");
+            System.out.println("В дереве нет объектов меньше " + target);
         } else {
             System.out.println("Следующий объект для объекта " + target + ": " + result.value);
         }
     }
-
-
 }

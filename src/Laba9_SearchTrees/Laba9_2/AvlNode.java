@@ -8,8 +8,8 @@ public class AvlNode<T extends Comparable<T>> {
     public int height;
     /**
      * Фактор балансировки.<br>
-     * Если >0, то ПРАВОЕ поддерево больше
-     * Если <0, то ЛЕВОЕ  поддерево больше
+     * Если >0, то ЛЕВОЕ поддерево больше
+     * Если <0, то ПРАВОЕ  поддерево больше
      */
     public int balanceFactor;
 
@@ -79,34 +79,11 @@ public class AvlNode<T extends Comparable<T>> {
             rightSon = rightSon.delete(successor.value);
         }
 
-        return balanceSafe();
+        return balance();
     }
 
 
     //              ВЫСОТА, БАЛАНСИРОВКА, ПОВОРОТЫ...
-
-
-    private AvlNode<T> balanceSafe() {
-        update();
-
-        int bf = balanceFactor;
-
-        if (bf > 1) {
-            if (leftSon != null && leftSon.balanceFactor < 0) {
-                leftSon = leftSon.rotateLeft();
-            }
-            return rotateRight();
-        }
-
-        if (bf < -1) {
-            if (rightSon != null && rightSon.balanceFactor > 0) {
-                rightSon = rightSon.rotateRight();
-            }
-            return rotateLeft();
-        }
-
-        return this;
-    }
 
     /**
      *

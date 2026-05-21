@@ -70,10 +70,7 @@ public class BstNode2<T extends Comparable<T>> {
             } else if (this.rightSon == null ^ this.leftSon == null) { // Есть только 1 ребенок
                 return this.leftSon != null ? this.leftSon : this.rightSon;
             } else {                                                   // Есть оба ребенка
-                BstNode2<T> tempNode = this.rightSon;
-                while (tempNode.leftSon != null) {
-                    tempNode = tempNode.leftSon;
-                }
+                BstNode2<T> tempNode = this.next(target);
                 this.value = tempNode.value;
                 this.rightSon = this.rightSon.delete(this.value);
                 return this;

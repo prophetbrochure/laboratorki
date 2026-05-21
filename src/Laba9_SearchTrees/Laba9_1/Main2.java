@@ -27,5 +27,8 @@ public class Main2 {
         tree.prev(5);
 
 
+        tree.next(100);
+        tree.prev(-100);
+
     }
 }
